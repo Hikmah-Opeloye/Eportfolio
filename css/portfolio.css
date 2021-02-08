@@ -1,0 +1,745 @@
+/* ******************** universal ***************************** 
+background: #02AAB0; /* fallback for old browsers 
+background: -webkit-linear-gradient(to left, #00CDAC, #02AAB0);   Chrome 10-25, Safari 5.1-6 
+background: linear-gradient(to left, #00CDAC, #02AAB0); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+
+*/
+* {
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}
+#flex-container {
+  justify-content: center;
+}
+.flex-item {
+  padding: 10px;
+}
+h1 {
+  padding: 40px;
+  font-size: 3em;
+}
+h1 span {
+  background-color: #282828;
+  border: 0.5px solid #fff;
+  padding: 10px;
+  text-align: center;
+  margin: 10px 20px;
+}
+#intro {
+  padding: 5%;
+  transition: 1s ease;
+
+  background-color: #a6a6a6; /* ie fallback*/
+  background-color: rgb(232, 232, 232, 0.3);
+  /* Web browsers that does not support RGBa */
+  background: rgb(0, 0, 0);
+  /* IE9/FF/chrome/safari supported */
+  background: rgba(0, 0, 0, 0.6);
+  /* IE 8 supported */
+  /* Here some time problem for Hover than you can use background color/image */
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#88000000, endColorstr=#88000000)";
+  /* Below IE7 supported */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#88000000, endColorstr=#88000000);
+}
+#intro p {
+  text-align: center;
+  margin: auto;
+  padding: 30px;
+  border: solid 0.5px #fff;
+}
+h2 {
+  margin-bottom: 20px;
+  padding: 10px;
+}
+h2 span {
+  position: relative;
+  border-bottom: 2px solid #0ac2c9;
+  background-color: #e8e8e8;
+  padding: 10px;
+}
+h2 span:after {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(22, 217, 197, 0);
+  border-top-color: #0ac2c9;
+  border-width: 10px;
+  margin-left: -10px;
+}
+#intro p a {
+  color: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  text-align: center;
+}
+h5 {
+  padding: 5%;
+  font-size: 20px;
+}
+
+li {
+  list-style-type: none;
+}
+/* ******************** header ***************************** */
+header {
+  background-image: url("../images/bg2.jpg");
+  background-size: cover;
+  background-color: #01a8ae;
+  justify-content: center;
+  padding: 0;
+  height: 100vh;
+}
+header #intro {
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 5px 8px 2px rgba(116, 114, 114, 0.5),
+    0 7px 20px 2px rgba(0, 0, 0, 0.151);
+  width: 80%;
+  margin: auto;
+  border: solid 0.5px #fff;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.sticky + .flex-container {
+  padding-top: 102px;
+}
+#minimal {
+  z-index: 1002;
+  display: none;
+  padding: 5px 0 20px 0;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  animation: menulist 2s;
+}
+@keyframes menulist {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: (1);
+  }
+}
+.myList {
+  animation: op 2s;
+}
+@keyframes op {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: (1);
+  }
+}
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  z-index: 100;
+  background-color: #282828;
+  box-shadow: 0 5px 8px 0 rgba(221, 137, 137, 0.2),
+    0 7px 20px 0 rgba(0, 0, 0, 0.151);
+}
+
+nav div {
+  text-align: left;
+  align-items: center;
+  padding: 10px;
+}
+nav i {
+  font-size: 40px;
+}
+nav i:hover {
+  color: yellow;
+}
+nav li {
+  padding: 20px;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+nav li a:hover {
+  color: yellow;
+}
+nav li a {
+  font-size: 20px;
+}
+nav a {
+  color: #fff;
+  cursor: pointer;
+}
+#nav-icon {
+  cursor: pointer;
+  border: none;
+  background-color: unset;
+  text-align: center;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+#nav-icon i {
+  color: #fff;
+}
+#nav-icon i:hover {
+  color: yellow;
+}
+.top {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  z-index: 1005;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  padding: 5px;
+  background-color: #969999;
+  box-shadow: 0 5px 5px 0 rgb(71, 71, 71), 0 7px 5px 0 rgba(0, 0, 0, 0.151);
+}
+.top i {
+  color: #fff;
+}
+a {
+  text-decoration: none;
+  font-size: 13px;
+  color: #000;
+  padding: 10px;
+  text-align: center;
+}
+p {
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: justify;
+  line-height: 1.5em;
+}
+/* ********************* about me **************************** */
+#WHOAMI {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.button {
+  margin: 10px;
+  border: 1px solid #666464;
+  color: #282828;
+}
+#first-child {
+  margin-bottom: 50px;
+}
+aside {
+  margin-top: 20px;
+}
+/* *********************info Tab **************************** */
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #02aab0;
+  background-color: #0ac2c9;
+  margin: auto;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: #0ac2c9;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #0ac2c9;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #00cdac;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #02aab0;
+  border-top: none;
+  margin: auto;
+}
+
+/* Style the close button */
+.topright {
+  float: right;
+  cursor: pointer;
+  background-color: #02aab0;
+  padding: 5px;
+  color: #ffffff;
+}
+
+.topright:hover {
+  color: red;
+}
+/* ************************************************* */
+
+/* ********************* skill bar **************************** */
+
+.myBar {
+  background-color: #f2f2f2;
+  display: block;
+  height: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  overflow: hidden;
+  border: 1px solid #ffffff;
+}
+.myBar span {
+  height: 20px;
+  float: left;
+  background-color: #0ac2c9;
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+}
+/* ***********************skill bar animation ************************** */
+.html {
+  width: 80%;
+  animation: html 2s;
+}
+.css {
+  width: 70%;
+  animation: css 2s;
+}
+.jscript {
+  width: 40%;
+  animation: jscript 2s;
+}
+.design {
+  width: 90%;
+  animation: design 2s;
+}
+@keyframes html {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+@keyframes css {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes jscript {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 40%;
+  }
+}
+@keyframes design {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+/* ****************** what i do ******************************* */
+
+.service {
+  border: 0.5px solid #ebe8e8;
+  padding: 10px;
+  box-shadow: 5px 2px 20px #e8e8e8;
+}
+.service:hover {
+  background-color: #282828;
+  color: #fff;
+}
+.service span {
+  display: block;
+  font-size: 40px;
+  text-align: center;
+  padding: 10px;
+}
+.service i {
+  color: #282828;
+}
+.service p {
+  text-align: center;
+}
+/* ******************** my work ***************************** */
+#MYWORK,
+#WHATIDO {
+  width: 80%;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr;
+  justify-content: space-between;
+  margin: auto;
+}
+.work {
+  position: relative;
+  border: 5px solid #e8e8e8;
+  padding: 10px;
+  vertical-align: middle;
+  text-align: center;
+}
+.work:hover .img {
+  opacity: 0.3;
+  box-shadow: 5px 2px 20px #f1f1f1;
+}
+.work:hover .middle {
+  opacity: 1;
+  width: 100%;
+}
+/* ******************** overlay ***************************** */
+.img {
+  opacity: 1;
+  max-width: 100%;
+  height: auto;
+  transition: 0.3s ease;
+  backface-visibility: hidden;
+  text-align: center;
+  vertical-align: middle;
+}
+.middle {
+  transition: 1s ease;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  background-color: rgba(2, 170, 176, 0.5);
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+}
+/* ******************** modal ***************************** */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1010;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0, 0.5);
+}
+.is-open {
+  display: block;
+}
+.modal-content {
+  background-color: #f4f4f4;
+  margin: 10% auto;
+
+  width: 90%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  animation-name: modalopen;
+  animation-duration: 1s;
+}
+.open-btn {
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  background-color: #0ac2c9;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+}
+.close-btn {
+  color: #fff;
+  float: right;
+  font-size: 20px;
+  border: none;
+  background-color: #0ac2c9;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+}
+.close-btn:hover,
+.close-btn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+} /* ********************** modal content *************************** */
+.modal-content a,
+.modal-content h3 {
+  background-color: #0ac2c9;
+  font-size: 18px;
+  padding: 10px;
+  color: #fff;
+}
+.modal-content-img {
+  padding: 10px;
+  margin: 10px 0;
+  text-align: center;
+}
+.modal-content-text {
+  padding: 10px;
+}
+.modal-content-text a {
+  text-align: center;
+  margin: auto;
+}
+.modal-content-img img {
+  width: 100%;
+}
+#mode-modal {
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 20px;
+  border-bottom: 50px solid #0ac2c9;
+}
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* ********************** contact *************************** */
+
+#GETINTOUCH {
+  position: relative;
+  margin-bottom: 20px;
+}
+form {
+  background-color: #e8e8e8;
+  padding: 20px;
+}
+#contact {
+  background-image: url("../images/Page 1.png");
+  background-repeat: repeat;
+  background-color: #01a8ae;
+  padding: 20px;
+  color: #fff;
+}
+#contact p {
+  background-color: unset;
+}
+#GETINTOUCH h3 {
+  font-size: 25px;
+}
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+}
+input[type="submit"] {
+  cursor: pointer;
+  background-color: #0ac2c9;
+  color: #ffffff;
+  font-size: 15px;
+}
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+}
+input:focus,
+textarea:focus {
+  border: 2px solid #0ac2c9;
+}
+textarea {
+  height: 100px;
+  resize: none;
+  border-right: 5px solid #0ac2c9;
+}
+form i {
+  padding: 10px;
+  min-width: 50px;
+  font-size: 20px;
+  text-align: center;
+  background-color: #0ac2c9;
+  color: #ffffff;
+}
+#contact h3 {
+  margin-bottom: 50px;
+}
+#contact p {
+  margin: 0;
+  font-size: 20px;
+  text-align: center;
+  color: #eeeeee;
+  background-color: rgb(48, 47, 47, 0.5);
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+#social i {
+  padding: 5px;
+  text-align: center;
+}
+#copyright {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  background-color: #282828;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  z-index: 1007;
+}
+#copyright p {
+  text-align: center;
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 400px) {
+  .tab button {
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  header {
+    height: 100vh;
+  }
+  /* ****************** about mediaquery ******************************* */
+
+  /* ****************** what i do mediaquery******************************* */
+  #MYWORK,
+  #WHATIDO {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+  }
+  /* ****************** my work mediaquery******************************* */
+
+  /* ****************** get in touch mediaquery******************************* */
+
+  #contact {
+    width: 50%;
+  }
+  a {
+    padding: 10px;
+    font-size: 15px;
+  }
+  #mode-modal {
+    grid-template-columns: 1fr 1fr;
+  }
+  .open-btn {
+    top: 45%;
+    left: 40%;
+  }
+  .tab button {
+    font-size: 20px;
+  }
+  #wrapper {
+    display: flex;
+    height: 100vh;
+  }
+  #flex-container {
+    width: 80%;
+    height: 100%;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    justify-content: center;
+  }
+  .flex-item {
+    padding: 20px;
+    line-height: 1.6;
+    vertical-align: middle;
+  }
+  nav {
+    background-color: #01a8ae;
+    padding: 5px;
+    width: 20%;
+    grid-template-columns: auto;
+    z-index: 99;
+    height: 100vh;
+  }
+  nav div {
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+  }
+  nav li {
+    text-align: left;
+    padding: 5px;
+  }
+  nav div i {
+    font-size: 40px;
+  }
+  nav li a {
+    font-size: 20px;
+    font-weight: lighter;
+  }
+  #nav-icon {
+    display: none;
+  }
+  #minimal {
+    display: grid;
+    height: 80vh;
+  }
+  @keyframes menulist {
+    0% {
+      height: 0%;
+    }
+    100% {
+      height: 80vh;
+    }
+  }
+  #copyright {
+    background-color: #01a8ae;
+  }
+  footer {
+    padding-bottom: 0px;
+  }
+  @media only screen and (min-width: 1110px) {
+    #MYWORK,
+    #WHATIDO {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    form {
+      width: 100%;
+    }
+
+    #WHOAMI {
+      flex-direction: row;
+    }
+    article,
+    aside {
+      width: 50%;
+      padding: 20px;
+      /*border:0.5px solid #02AAB0;*/
+    }
+    article {
+      margin-right: 10px;
+    }
+    aside {
+      margin-top: 0px;
+      margin-left: 10px;
+      background-color: #e8e8e8;
+    }
+  }
+}
